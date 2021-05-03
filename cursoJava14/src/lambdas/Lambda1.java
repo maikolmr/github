@@ -1,9 +1,10 @@
 package lambdas;
 
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Lambda1 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("teste");
@@ -12,10 +13,13 @@ public class Lambda1 {
 		
 		BinaryOperator<Double> calc = (a,b) -> a+b;
 		Double res = calc.apply(3.0, 4.0);
-		
 		System.out.println(res);
 		
-
+		Supplier<String> produto = () -> "Hello";
+		System.out.println(produto.get());
+		
+		Function<String, Integer> fsize = s -> s.length(); 
+		System.out.println(fsize.apply("teste"));
 	}
 
 }
