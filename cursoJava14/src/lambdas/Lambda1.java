@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 public class Lambda1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("teste");
+		//System.out.println("teste");
 		Runnable tarefa = () -> System.out.println("Hello!");
 		tarefa.run();
 		
@@ -17,6 +17,9 @@ public class Lambda1 {
 		
 		Supplier<String> produto = () -> "Hello";
 		System.out.println(produto.get());
+		
+		Supplier<Double> numero = () -> 14.9;
+		System.out.println(numero.get());
 		
 		Function<String, Integer> fsize = s -> s.length(); 
 		System.out.println(fsize.apply("teste"));

@@ -12,6 +12,7 @@ public class Filter0 {
 		
 				numbers.stream()
 					.filter(n -> n > 5)
+					.filter(n -> n <10)
 					.map(n -> n * n)
 					.forEach(System.out::println);
 				

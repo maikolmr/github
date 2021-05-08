@@ -12,6 +12,11 @@ public class CriandoStreams {
 		Consumer<String> print = System.out::print;
 		Consumer<Integer> println = System.out::println;
 		
+		//build (criação números)
+		Stream<Integer> nums = Stream.of(1, 2, 3);
+		//terminais
+		nums.forEach(println);
+		
 		//build (criação)
 		Stream<String> langs = Stream.of("Java ", "Lua ", "JS\n");
 		//terminais
@@ -28,6 +33,6 @@ public class CriandoStreams {
 		outrasLangs.parallelStream().forEach(print);
 		
 		//Stream.generate(() -> "a").forEach(print);
-		Stream.iterate(0, n -> n + 1).forEach(println);
+		//Stream.iterate(0, n -> n + 1).forEach(println);
 	}
 }

@@ -14,7 +14,7 @@ public class Outros {
 		Aluno a6 = new Aluno("Pedro", 9.1);
 		Aluno a7 = new Aluno("Gui", 8.1);
 		Aluno a8 = new Aluno("Maria", 10);
-		
+
 		List<Aluno> alunos = 
 				Arrays.asList(a1, a2, a3, a4, a5, a6, a7, a8);
 		
@@ -24,15 +24,15 @@ public class Outros {
 		System.out.println("\nSkip/Limit");
 		alunos.stream()
 			.distinct()
-			.skip(2)
+			.skip(3)
 			.limit(2)
 			.forEach(System.out::println);
 		
 		System.out.println("\ntakeWhile");
 		alunos.stream()
 			.distinct()
-			.skip(2)
-			.takeWhile(a -> a.nota >= 7)
+			.skip(1)
+			.takeWhile(a -> a.nota < 7)
 			.forEach(System.out::println);
 	}
 }

@@ -22,7 +22,7 @@ public class Reduce2 {
 		BinaryOperator<Double> somatorio = (a, b) -> a + b;
 		
 		alunos.parallelStream()
-			.filter(aprovado)
+//			.filter(aprovado)
 			.map(apenasNota)
 			.reduce(somatorio)
 			.ifPresent(System.out::println);
